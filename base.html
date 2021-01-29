@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>sandeepwebsite.com</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+    
+        <img src="{% static 'papp/image/boy.jpg' %}" width="70" height="70" alt="nothing">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto">
+                <a class="navbar-brand " href="{% url 'homen' %}">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="nav-item nav-link active" href="{% url 'contactn' %}">Contact <span
+                        class="sr-only">(current)</span></a>
+
+                <a class="nav-item nav-link" href="{% url 'portfolion' %}">Portfolio</a>
+                <a class="nav-item nav-link" href="{% url 'extran' %}">extra</a>
+
+            </div>
+            <div class="navbar-nav mx-auto">
+			    <a class="nav-item nav-link active" href="https://www.linkedin.com/in/sandeep-kumar-0116b0165/">
+                    <img src="{% static 'papp/image/link.png' %}" width="20" height="20" alt="nothing">
+                
+                    <span class="sr-only">(current)</span></a>
+
+                <a class="nav-item nav-link active" href="https://www.instagram.com/raj.sandip96/"><img
+                        src="{% static 'papp/image/insta.png' %}" width="20" height="20" alt="nothing"> <span
+                        class="sr-only">(current)</san></a>
+                <a class="nav-item nav-link active" href="https://www.facebook.com/sandip.raj.79230"><img src="{% static 'papp/image/fb.png' %}"
+                                                                                 width="20" height="20" alt="nothing">
+                    <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="https://mail.google.com/raj.sandip96"><img src="{% static 'papp/image/gmail.png' %}"
+                                                                              width="20" height="20" alt="nothing">
+                    <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>
+
+

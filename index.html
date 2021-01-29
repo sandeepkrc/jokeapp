@@ -1,0 +1,38 @@
+{% extends 'papp/base.html' %}
+{% block content %}
+<div class="container">
+	
+	<div class="row"style="margin-top:100px">
+	    <div class="col-sm-6">
+	    
+		
+		    <form action="{% url 'homen' %}" method="post">
+
+			    {% csrf_token %}
+
+                <div class="form-row col-sm-6">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name"name="fname">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name"name="lname">
+                       <br>
+                      <input type="submit" value="tell me a joke">
+                    </div>
+				</div>
+            </form>
+		</div>
+            <div class="card" style="width: 18rem;float:right;">
+                <!--<img src="..." class="card-img-top" alt="...">-->
+                <div class="card-body">
+                    <h5 class="card-title">JOKES</h5>
+                    <p class="card-text">
+                        MacGyver can build an airplane out of gum and paper clips. sandeep Norris can kill him and take itMacGyver can build an airplane out of gum and paper clips. sandeep Norris can kill him and take it
+                        {{ joker }}
+                        </p>
+                    <a href="{% url 'extran' %}" class="btn btn-primary"> indexhtmlCheck Myportfolio</a>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
